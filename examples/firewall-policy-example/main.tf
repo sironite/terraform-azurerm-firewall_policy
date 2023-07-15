@@ -1,6 +1,5 @@
 module "firewall_policy" {
-  source  = "sironite/firewall_policy/azurerm"
-  version = "x.x.x"
+  source = "sironite/firewall_policy/azurerm"
 
   firewall_policy_name = "example-firewall-policy"
   location             = "eastus"
