@@ -15,10 +15,6 @@ resource "azurerm_firewall_policy" "this" {
     servers       = var.dns_servers
   }
 
-  identity {
-    type = var.identity_type
-  }
-
   insights {
     enabled                            = var.insights_enabled
     default_log_analytics_workspace_id = var.log_analytics_workspace_id
