@@ -8,8 +8,7 @@
 
 ```hcl
 module "firewall_policy" {
-  source  = "sironite/firewall_policy/azurerm"
-  version = "x.x.x"
+  source = "sironite/firewall_policy/azurerm"
 
   firewall_policy_name = "example-firewall-policy"
   location             = "eastus"
@@ -37,10 +36,10 @@ No modules.
 
 | Name | Description | Type | Required |
 |------|-------------|------|:--------:|
-| auto\_learn\_private\_ranges\_enabled | Whether to automatically learn private IP ranges to allow through the firewall policy. | `bool` | yes |
 | firewall\_policy\_name | The name of the firewall policy. | `string` | yes |
 | location | The location of the firewall policy. | `string` | yes |
 | resource\_group\_name | The name of the resource group in which to create the firewall policy. | `string` | yes |
+| auto\_learn\_private\_ranges\_enabled | Whether to automatically learn private IP ranges to allow through the firewall policy. | `bool` | no |
 | base\_policy\_id | The ID of the base policy to use for the firewall policy. | `string` | no |
 | dns\_proxy\_enabled | Whether DNS proxy is enabled for the firewall policy. | `bool` | no |
 | dns\_servers | The list of DNS servers to use for the firewall policy. | `list(string)` | no |
