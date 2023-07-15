@@ -28,7 +28,7 @@ variable "private_ip_ranges" {
 variable "auto_learn_private_ranges_enabled" {
   type        = bool
   description = "Whether to automatically learn private IP ranges to allow through the firewall policy."
-  enabled     = true
+  default     = true
 }
 
 variable "sku" {
@@ -59,12 +59,6 @@ variable "dns_servers" {
   type        = list(string)
   description = "The list of DNS servers to use for the firewall policy."
   default     = []
-}
-
-variable "identity_type" {
-  type        = string
-  description = "The type of identity to use for the firewall policy."
-  default     = "SystemAssigned"
 }
 
 variable "insights_enabled" {

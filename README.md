@@ -43,7 +43,6 @@ No modules.
 | base\_policy\_id | The ID of the base policy to use for the firewall policy. | `string` | no |
 | dns\_proxy\_enabled | Whether DNS proxy is enabled for the firewall policy. | `bool` | no |
 | dns\_servers | The list of DNS servers to use for the firewall policy. | `list(string)` | no |
-| identity\_type | The type of identity to use for the firewall policy. | `string` | no |
 | insights\_enabled | Whether to enable insights for the firewall policy. | `bool` | no |
 | log\_analytics\_workspace\_id | The ID of the Log Analytics workspace to use for the firewall policy. | `string` | no |
 | private\_ip\_ranges | The list of private IP ranges to allow through the firewall policy. | `list(string)` | no |

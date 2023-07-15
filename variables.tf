@@ -61,12 +61,6 @@ variable "dns_servers" {
   default     = []
 }
 
-variable "identity_type" {
-  type        = string
-  description = "The type of identity to use for the firewall policy."
-  default     = "SystemAssigned"
-}
-
 variable "insights_enabled" {
   type        = bool
   description = "Whether to enable insights for the firewall policy."
