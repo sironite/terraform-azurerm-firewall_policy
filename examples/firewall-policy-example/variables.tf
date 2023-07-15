@@ -28,7 +28,7 @@ variable "private_ip_ranges" {
 variable "auto_learn_private_ranges_enabled" {
   type        = bool
   description = "Whether to automatically learn private IP ranges to allow through the firewall policy."
-  default     = true
+  enabled     = true
 }
 
 variable "sku" {
