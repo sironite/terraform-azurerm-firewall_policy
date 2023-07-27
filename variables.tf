@@ -64,7 +64,7 @@ variable "dns_servers" {
 variable "insights_enabled" {
   type        = bool
   description = "Whether to enable insights for the firewall policy."
-  default     = false
+  default     = true
 }
 
 variable "log_analytics_workspace_id" {

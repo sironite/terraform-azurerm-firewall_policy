@@ -15,14 +15,18 @@ resource "azurerm_firewall_policy" "this" {
     servers       = var.dns_servers
   }
 
-  insights {
-    enabled                            = var.insights_enabled
-    default_log_analytics_workspace_id = var.log_analytics_workspace_id
-    retention_in_days                  = var.retention_in_days
-    log_analytics_workspace {
-      id                = var.log_analytics_workspace_id
-      firewall_location = var.location
+  dynamic "insights" {
+    for_each = var.insights_enabled ? [1] : []
+    content {
+      enabled                            = var.insights_enabled
+      default_log_analytics_workspace_id = var.log_analytics_workspace_id
+      retention_in_days                  = var.retention_in_days
+      log_analytics_workspace {
+        id                = var.log_analytics_workspace_id
+        firewall_location = var.location
+      }
     }
+    
   }
 
   tags = var.tags
